@@ -23,10 +23,11 @@ public class SelectionSort {
 				{
 					min=j;
 				}
-				int temp=arr[i];
-				arr[i]=arr[min];
-				arr[min]=temp;
+				
 			}
+			int temp=arr[i];
+			arr[i]=arr[min];
+			arr[min]=temp;
 		}
 		
 		return arr;
