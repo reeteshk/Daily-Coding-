@@ -1,5 +1,5 @@
 
-Recursion 
+***Recursion*** 
 
 static int f(int n, int[] dp){
     if(n<=1) return n;
@@ -17,7 +17,7 @@ Space Complexity: O(N)
 Reason: We are using a recursion stack space(O(N)) and an array (again O(N)). Therefore total space complexity will be O(N) + O(N) ≈ O(N)
 
 
-Memoization
+***Memoization***
 
 static int f(int n, int[] dp){
     if(n<=1) return n;
@@ -26,7 +26,7 @@ static int f(int n, int[] dp){
     return dp[n]= f(n-1,dp) + f(n-2,dp);
 }
 
-DP
+***DP***
 
 static int f(int n){
   int n=5;
