@@ -6,7 +6,7 @@ This is a follow-up question to “Frog Jump” discussed in the previous articl
  In this question, the frog is allowed to jump up to ‘K’ steps at a time. 
 If K=4, the frog can jump 1,2,3, or 4 steps at every index.
 
-recursion
+//recursion TC O((n)xK) SC O(n)+O(N)
 
 static int solveUtil(int ind, int[] height, int k){
     if(ind==0) return 0;
@@ -25,11 +25,7 @@ static int solveUtil(int ind, int[] height, int k){
     
 }
 
-
-
-
-
-Memoization
+//---Memoization
 
 static int solveUtil(int ind, int[] height, int[] dp, int k){
     if(ind==0) return 0;
@@ -50,7 +46,7 @@ static int solveUtil(int ind, int[] height, int[] dp, int k){
 
 
 
-Dp
+//Dp
 
 static int solveUtil(int n, int[] height, int[] dp, int k){
     dp[0]=0;
@@ -68,3 +64,5 @@ static int solveUtil(int n, int[] height, int[] dp, int k){
     return dp[n-1];
     
 }
+
+//Optimized Dp is not possible as we will be requiring the k variable in every recursive call.

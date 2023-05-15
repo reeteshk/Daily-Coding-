@@ -5,7 +5,7 @@ We need to return the minimum energy that can be used by the frog to jump from s
 
 
 
-Recursion
+//"***Recursion***"
 
 static int solve(int ind,int[] height){
     if(ind==0) return 0;
@@ -21,8 +21,7 @@ static int solve(int ind,int[] height){
 
 
 
-Memoization
-
+//"***Memoization***"
 
 static int solve(int ind,int[] height,int[] dp){
     if(ind==0) return 0;
@@ -31,11 +30,10 @@ static int solve(int ind,int[] height,int[] dp){
     int jumpOne= solve(ind-1, height,dp)+ Math.abs(height[ind]-height[ind-1]);
     if(ind>1)
         jumpTwo = solve(ind-2, height,dp)+ Math.abs(height[ind]-height[ind-2]);
-    
     return dp[ind]=Math.min(jumpOne, jumpTwo);
 }
 
-DP
+//"***DP***"
 
 static int solve(int height[])
 {
@@ -52,12 +50,10 @@ static int solve(int height[])
         dp[ind]=Math.min(jumpOne, jumpTwo);
   }
   return dp[n-1];
-  
-  }
-  
+}
   
   
- Space Optimization
+//"***OptimizedDP***"
  static int solve(int height[])
 {
  int n=height.length;

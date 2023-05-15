@@ -23,7 +23,7 @@ Explanation: There are three ways to climb to the top.
 3. 2 steps + 1 step
 
 
-	Recursion
+	// ***Recursion***
 
  public int climbStairsRec(int n)
     {
@@ -38,7 +38,7 @@ Explanation: There are three ways to climb to the top.
 	
 	
 	
-	Memoization
+	//***Memoization***
 	
 	
 	 public int climbStairsMem(int n,int dp[] )
@@ -56,7 +56,7 @@ Explanation: There are three ways to climb to the top.
 
     }
 	
-	Dp
+	//****Dp****
 	
 		 public int climbStairsDP(int n)
     {
@@ -74,5 +74,23 @@ Explanation: There are three ways to climb to the top.
         return dp[n];
 
     }
-	
-	
+
+	///***Optimized Dp***
+
+	 public int climbStairsDPOptimized(int n)
+	{
+		if(n==0 || n==1)
+		{
+		   return 1;
+		}
+		int prev=1;
+		int curr=1;
+		for(int i=2;i<=n;i++)
+		{
+			int temp=curr;
+			curr=prev+curr;
+			prev=temp;
+		}
+		return curr;
+
+	}// Path: Climbing Chairs.java
