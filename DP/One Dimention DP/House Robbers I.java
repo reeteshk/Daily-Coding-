@@ -70,7 +70,7 @@ class Solution {
         int notpick=adjSum(nums,n-1,dp);
         return dp[n]=Math.max(pick,notpick);
     }
-    //DP Approach
+    //Memoization Approach
     public static int adjSum(int nums[],int n)
     {
         int dp[]=new int[nums.length+1];
